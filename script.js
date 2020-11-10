@@ -18,8 +18,8 @@
 
 window.addEventListener("load", onLoad);
 
-let users = [];
-let userFiltered = [];
+var users = [];
+var userFiltered = [];
 
 function onLoad() {
   createUsers();
@@ -82,5 +82,7 @@ function createUsers() {
 }
 
 function filterUsers() {
-  userFiltered.push(users.filter(word => word.money >= 200));
+  userFiltered.push(
+    users.filter(word => word.money >= 200 && word.country == "spain")
+  );
 }
