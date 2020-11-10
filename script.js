@@ -82,6 +82,5 @@ function createUsers() {
 }
 
 function filterUsers() {
-  const resul = users.forEach(user => user.money <= 200);
-  userFiltered.push(resul);
+  userFiltered.push(users.filter(word => word.money >= 200));
 }
